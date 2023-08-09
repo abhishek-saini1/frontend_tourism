@@ -1,0 +1,32 @@
+<div class="nav">
+  <input type="checkbox" id="nav-check">
+  <div class="nav-header">
+    <div class="nav-title">
+      <img src="" alt="" style="width: 11%;">
+    </div>
+  </div>
+  <div class="nav-btn">
+    <label for="nav-check">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+  <div class="nav-links">
+    <a routerLink="/home">Home</a>
+    <a routerLink="/about">About</a>
+    <!-- <a routerLink="/booking">Booking</a> -->
+    <a routerLink="/trips" *ngIf="role=='TravelAgent'">Trips</a>
+   
+     <a routerLink="/admin" *ngIf="role=='Admin'">Admin</a> 
+      <a routerLink="/gallery" *ngIf="role=='Admin'">galleryAdmin</a>
+    <a routerLink="/image">gallery</a>  
+    <a routerLink="/fetchtrip" *ngIf="role=='Traveler'">packages</a>
+    <!-- <a routerLink="/fetchfeed" >feedback</a> -->
+    <a *ngIf="!isLogged" routerLink="/signup">Signup</a>
+    <a *ngIf="!isLogged" (click)="login()">Login</a>
+<a *ngIf="isLogged" (click)="logout()">Logout</a> 
+
+   
+  </div>
+</div>

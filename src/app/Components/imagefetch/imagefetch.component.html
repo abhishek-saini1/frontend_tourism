@@ -1,0 +1,13 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="row">
+      <div class="col-md-4" *ngFor="let image of images">
+        <div class="card mb-4">
+          <div class="card-body" style="height: 200px; display: flex; justify-content: center; align-items: center;">
+            <img *ngIf="image.imageData" [src]="sanitizeImage(image.imageData)" alt="Gallery Image" style="object-fit: contain; max-height: 100%; max-width: 100%;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

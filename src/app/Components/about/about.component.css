@@ -1,0 +1,73 @@
+/* Add your CSS styles here */
+
+/* CSS reset and basic styling */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Hero section */
+  .hero {
+    background-color: #f2f2f2;
+    padding: 80px 0;
+  }
+  
+
+  
+  .hero h1 {
+    font-size: 36px;
+  }
+  
+  .hero p {
+    font-size: 20px;
+  }
+  
+  /* Team section */
+  .team-section {
+    padding: 60px 0;
+  }
+  
+  .team-members {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  /* Team member card styles */
+  .team-member-card {
+    width: 30%;
+    margin-bottom: 30px;
+    /* Add more card styles, e.g., background color, box shadow, etc. */
+  }
+  
+  .team-member-card img {
+    width: 100%;
+    border-radius: 50%;
+  }
+  
+  .team-member-card h3 {
+    margin-top: 10px;
+  }
+  
+  /* Mission section */
+  .mission-section {
+    padding: 60px 0;
+  }
+  
+  .mission-section p {
+    font-size: 18px;
+  }
+  
+ 
+  

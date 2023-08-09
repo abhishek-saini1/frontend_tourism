@@ -1,0 +1,17 @@
+<!-- <app-navbar></app-navbar>
+<div>
+    <input type="file" (change)="onFileSelected($event)">
+    <button (click)="uploadImage()">Upload Image</button>
+  </div> -->
+  
+  <!-- image-gallery.component.html -->
+  <!-- <div *ngFor="let image of images">
+    <img [src]="image.imageData" alt="Gallery Image">
+  </div>
+   -->
+
+   <app-navbar></app-navbar>
+<div class="upload-container">
+  <input type="file" (change)="onFileSelected($event)">
+  <button class="upload-button" (click)="uploadImage()">Upload Image</button>
+</div>

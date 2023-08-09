@@ -1,0 +1,10 @@
+<app-navbar></app-navbar>
+<form [formGroup]="formGroup" (ngSubmit)="success()" class="feedback-form">
+    <label for="name" class="form-label">Name:</label>
+    <input type="text" formControlName="name" id="name" required class="form-input">
+
+    <label for="feedBackTitle" class="form-label">Feedback:</label>
+    <input type="text" formControlName="feedBackTitle" id="feedBackTitle" required class="form-input">
+
+    <button class="submit-button">Submit</button>
+</form>

@@ -1,0 +1,166 @@
+/* CSS reset */
+body, h1, h2, h3, p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Background Image Section */
+.background {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 60vh; /* Adjust the height as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Heading Overlay on Background Image
+#h1-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  font-size: 36px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+} */
+
+#explore-heading {
+  font-size: 28px;
+  margin-top: 20px;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card {
+  text-align: center;
+  height: 40%;
+  width: 35%;
+  background-color: #f2f2f2;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.card img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.card-content {
+  margin-top: 10px;
+}
+
+.card-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* Media query for screens with a maximum width of 992px */
+@media screen and (max-width: 992px) {
+  #h1-overlay {
+    font-size: 24px;
+  }
+
+  #explore-heading {
+    font-size: 20px;
+  }
+
+  .cards-container .card {
+    width: calc(50% - 20px);
+  }
+
+  /* Adjust font sizes for smaller devices */
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+}
+
+/* Media query for screens with a maximum width of 768px */
+@media screen and (max-width: 768px) {
+  #h1-overlay {
+    font-size: 20px;
+  }
+
+  #explore-heading {
+    font-size: 18px;
+  }
+
+  .cards-container .card {
+    width: calc(50% - 20px);
+  }
+
+  /* Adjust font sizes for even smaller devices */
+  h1 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+}
+
+/* Media query for screens with a maximum width of 576px */
+@media screen and (max-width: 576px) {
+  .card {
+    height: auto;
+    width: 100%;
+  }
+}
+.feedback-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  font-size: 14px;
+}

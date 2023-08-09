@@ -1,0 +1,58 @@
+<app-navbar></app-navbar>
+<div class="background">
+
+
+<div class="container">
+    <form [formGroup]="formGroup" id="section" (ngSubmit)="fromsubmit()">
+      <table>
+        <tr>
+          <td><label for="travelerName">Traveler Name</label></td>
+          <td><input type="text" formControlName="travelerName" required></td>
+        </tr>
+        <tr>
+          <td><label for="departureDate">Departure Date</label></td>
+          <td><input type="datetime-local" formControlName="departureDate" required></td>
+        </tr>
+        <tr>
+          <td><label for="returnDate">Return Date</label></td>
+          <td><input type="datetime-local" formControlName="returnDate" required></td>
+        </tr>
+        <tr>
+          <td><label for="destination">Destination</label></td>
+          <td><input type="text" formControlName="destination" required></td>
+        </tr>
+        <tr>
+          <td><label for="numberOfTravelers">Number of Travelers</label></td>
+          <td><input type="number" formControlName="numberOfTravelers" required></td>
+        </tr>
+        
+        <tr>
+          <td><label for="accommodation">Accommodation</label></td>
+          <td><input type="text" formControlName="accommodation" required></td>
+        </tr>
+        <tr>
+          <td><label for="description">Description</label></td>
+          <td><input type="text" formControlName="description" required></td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <button  (click)="generatePDF()" printSectionId="section" >SUBMIT</button>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+</div>
+
+<!-- <div class="" id="content" #content>
+  <div class="">
+    <h2>Submitted Values:</h2>
+    <p><strong>Traveler Name:</strong> {{ formGroup.value.travelerName }}</p>
+    <p><strong>Departure Date:</strong> {{ formGroup.value.departureDate | date }}</p>
+    <p><strong>Return Date:</strong> {{ formGroup.value.returnDate | date }}</p>
+    <p><strong>Destination:</strong> {{ formGroup.value.destination }}</p>
+    <p><strong>Number of Travelers:</strong> {{ formGroup.value.numberOfTravelers }}</p>
+    <p><strong>Accommodation:</strong> {{ formGroup.value.accommodation }}</p>
+    <p><strong>Description:</strong> {{ formGroup.value.description }}</p>
+  </div>
+</div> -->

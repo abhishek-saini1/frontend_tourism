@@ -1,0 +1,37 @@
+<!-- <div>
+  <h1>Upload Trip Image</h1>
+  <input type="file" (change)="onFileSelected($event)" />
+  <button (click)="uploadImage()">Upload Image</button>
+</div>
+<div *ngFor="let trip of trips">
+  <h2>{{ trip.destination }}</h2>
+  <img [src]="getBase64ImageSrc(trip.tImage)" alt="Trip Image" />
+  <!-- Other trip details 
+</div> -->
+<app-navbar></app-navbar>
+<div style="max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #ccc; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+  <h1 style="font-size: 24px; margin-bottom: 20px;">Upload Trip Data</h1>
+  <label style="display: block; margin-bottom: 10px;">
+    Destination: <input [(ngModel)]="newTrip.destination" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+  </label>
+  <label style="display: block; margin-bottom: 10px;">
+    Trip Details: <input [(ngModel)]="newTrip.tDetails" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+  </label>
+  <label style="display: block; margin-bottom: 10px;">
+    Rates Per Day: <input [(ngModel)]="newTrip.ratesPerDay" type="number" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+  </label>
+  <label style="display: block; margin-bottom: 10px;">
+    Rates Per Hour: <input [(ngModel)]="newTrip.ratesPerHour" type="number" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+  </label>
+  <label style="display: block; margin-bottom: 10px;">
+    Rates Per Tour Pack: <input [(ngModel)]="newTrip.ratesPerTourPack" type="number" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+  </label>
+  <label style="display: block; margin-bottom: 10px;">
+    Itinerary: <textarea [(ngModel)]="newTrip.itinerary" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;"></textarea>
+  </label>
+  <label style="display: block; margin-bottom: 20px;">
+    Food and Accommodation: <textarea [(ngModel)]="newTrip.foodAndAccommodation" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;"></textarea>
+  </label>
+  <button (click)="uploadData()" style="background-color: #007bff; color: #fff; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">Upload Data</button>
+</div>
+

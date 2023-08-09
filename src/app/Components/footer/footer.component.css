@@ -1,0 +1,113 @@
+/* Footer Styles */
+footer {
+    background-color: #f0f0f0;
+    padding: 30px 0;
+    color: #333;
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footer-logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .footer-logo img {
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .footer-links li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  .footer-links li:last-child {
+    margin-right: 0;
+  }
+  
+  .footer-links a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links a:hover {
+    color: #007bff;
+  }
+  
+  .footer-social ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .footer-social li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .footer-social i {
+    font-size: 24px;
+    color: #333;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-social i:hover {
+    color: #007bff;
+  }
+  
+  .footer-legal {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .footer-legal a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .footer-legal a:hover {
+    color: #007bff;
+  }
+  
+  /* Responsive Footer */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-links,
+    .footer-social {
+      margin-top: 20px;
+    }
+  
+    .footer-links li,
+    .footer-social li {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  
+    .footer-logo {
+      margin-bottom: 20px;
+    }
+    
+    .footer-logo img {
+      height: 30px;
+    }
+  }
+  

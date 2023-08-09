@@ -1,0 +1,74 @@
+<app-navbar></app-navbar>
+<div class="registration-wrapper">
+  <div class="registration-container">
+    <h2>Registration</h2>
+    <form [formGroup]="formGroup" (ngSubmit)="registration()">
+      <!-- Username Field -->
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" formControlName="username" id="username" placeholder="Enter your username" required>
+        <div *ngIf="formGroup.get('username')?.hasError('required') && formGroup.get('username')?.touched" class="error-message">
+          Username is required.
+        </div>
+      </div>
+      
+      <!-- Fullname Field -->
+      <div class="form-group">
+        <label for="fullname">FullName:</label>
+        <input type="text" formControlName="fullname" id="fullname" placeholder="Enter your fullname" required>
+        <div *ngIf="formGroup.get('fullname')?.hasError('required') && formGroup.get('fullname')?.touched" class="error-message">
+          Fullname is required.
+        </div>
+      </div>
+      
+     <!-- Phone Field -->
+<div class="form-group">
+  <label for="phone">Phone:</label>
+  <input type="text" formControlName="phone" id="phone" placeholder="Enter your phone" required>
+  <div *ngIf="formGroup.get('phone')?.hasError('required') && formGroup.get('phone')?.touched" class="error-message">
+    Phone is required.
+  </div>
+  <div *ngIf="formGroup.get('phone')?.hasError('pattern') && formGroup.get('phone')?.touched" class="error-message">
+    Phone must be exactly 10 digits.
+  </div>
+</div>
+
+      
+      <!-- Email Field -->
+      <div class="form-group">
+        <label for="useremail">Email:</label>
+        <input type="email" formControlName="email" id="useremail" placeholder="Enter your email" required>
+        <div *ngIf="formGroup.get('email')?.hasError('required') && formGroup.get('email')?.touched" class="error-message">
+          Email is required.
+        </div>
+        <div *ngIf="formGroup.get('email')?.hasError('email') && formGroup.get('email')?.touched" class="error-message">
+          Enter a valid email address.
+        </div>
+      </div>
+      
+      <!-- Password Field -->
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" formControlName="password" id="password" placeholder="Enter your password" required>
+        <div *ngIf="formGroup.get('password')?.hasError('required') && formGroup.get('password')?.touched" class="error-message">
+          Password is required.
+        </div>
+      </div>
+      
+      <!-- Role Field -->
+      <div class="form-group">
+        <label for="role">Role:</label>
+        <select formControlName="role" id="role" required>
+          <option value="">Select role</option>
+          <option value="Agent">Agent</option>
+          <option value="Traveler">Traveler</option>
+        </select>
+        <div *ngIf="formGroup.get('role')?.hasError('required') && formGroup.get('role')?.touched" class="error-message">
+          Role is required.
+        </div>
+      </div>
+
+      <button type="submit" [disabled]="formGroup.invalid">Register</button>
+    </form>
+  </div>
+</div>

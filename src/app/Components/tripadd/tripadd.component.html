@@ -1,0 +1,21 @@
+<app-navbar></app-navbar>
+<div>
+    <h1>Uploaded Trips</h1><input type="text" placeholder="Search trips" [(ngModel)]="searchTerm" (input)="search()">
+
+    <div class="card-container">
+      <div class="card" *ngFor="let trip of trips; let i = index">
+        <img *ngIf="images[i]?.imageData" [src]="sanitizeImage(images[i]?.imageData)" alt="Gallery Image" style="object-fit: contain; max-height: 100%; max-width: 100%;">
+        <div class="card-content">
+          <h2>{{ trip.destination }}</h2>
+          <p>Trip Details: {{ trip.tDetails }}</p>
+          <p>Rates Per Day: {{ trip.ratesPerDay }}</p>
+          <p>Rates Per Hour: {{ trip.ratesPerHour }}</p>
+          <p>Rates Per Tour Pack: {{ trip.ratesPerTourPack }}</p>
+          <p>Itinerary: {{ trip.itinerary }}</p>
+          <p>Food and Accommodation: {{ trip.foodAndAccommodation }}</p>
+          <button class="book-button" (click)="book()">Book Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

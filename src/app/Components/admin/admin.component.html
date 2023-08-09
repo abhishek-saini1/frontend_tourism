@@ -1,0 +1,66 @@
+<app-navbar></app-navbar>
+
+<h2>Agent Management</h2>
+
+<button type="button" (click)="showAddForm()" *ngIf="!isAddFormVisible" style="margin-left: 75px;">Add New Agent</button>
+
+<div *ngIf="isAddFormVisible">
+  <h3>Add New Agent</h3>
+
+  <form>
+    <div>
+      <label for="username">Username:</label>
+      <input type="text" id="username" [(ngModel)]="currentAgent.username" name="username" style="margin-left: 40px;">
+    </div>
+    <div>
+      <label for="password">Password:</label>
+      <input type="password" id="password" [(ngModel)]="currentAgent.password" name="password" style="margin-left: 44px;">
+    </div>
+    <div>
+      <label for="fullName">Full Name:</label>
+      <input type="text" id="fullName" [(ngModel)]="currentAgent.fullName" name="fullName" style="margin-left: 37px;">
+    </div>
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" [(ngModel)]="currentAgent.email" name="email" style="margin-left: 77px;">
+    </div>
+    <div>
+      <label for="phone">Phone:</label>
+      <input type="text" id="phone" [(ngModel)]="currentAgent.phone" name="phone" style="margin-left: 70px;">
+    </div>
+    <div>
+      <label for="isApproved">Is Approved:</label>
+      <input type="checkbox" id="isApproved" [(ngModel)]="currentAgent.isApproved" name="isApproved" style="margin-left: 25px;">
+    </div>
+
+    <div class="button-container">
+      <button type="button" class="add-button" (click)="addAgent()" *ngIf="currentAgent.id === 0">Add Agent</button>&nbsp;&nbsp;&nbsp;
+      <button type="button" class="update-button" (click)="editagent(agent)" >Save</button>&nbsp;&nbsp;&nbsp;
+      <button type="button" class="cancel-button" (click)="cancelAddForm()">Cancel</button>
+    </div>
+  </form>
+</div>
+<!-- Display the list of agents here -->
+<table>
+    <tr>
+      <th>ID</th>
+      <th>Username</th>
+      <th>Full Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Is Approved</th>
+      <th>Actions</th>
+    </tr>
+    <tr *ngFor="let agent of agents">
+      <td>{{ agent.id }}</td>
+      <td>{{ agent.username }}</td>
+      <td>{{ agent.fullName }}</td>
+      <td>{{ agent.email }}</td>
+      <td>{{ agent.phone }}</td>
+      <td>{{ agent.isApproved }}</td>
+      <td>
+        <button type="button" (click)="editagent(agent)">Approved</button>&nbsp;&nbsp;&nbsp;&nbsp;
+      </td>
+    </tr>
+  </table>
+  
